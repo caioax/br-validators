@@ -6,12 +6,12 @@ export function validarCPF(cpf) {
     // Verificando se os dígitos são todos iguais
     if (new Set(cpf).size === 1) return false;
 
-    // Conta do primeiro digito verificador
+    // Conta do primeiro dígito verificador
     let r = 0;
-    let j = 10;
+    let peso = 10;
     for (let i = 0; i < 9; i++) {
-        r += Number(cpf[i]) * j;
-        j--;
+        r += Number(cpf[i]) * peso;
+        peso--;
     }
 
     r = 11 - (r % 11);
@@ -21,10 +21,10 @@ export function validarCPF(cpf) {
 
     // Conta do segundo digito verificador
     r = 0;
-    j = 11;
+    peso = 11;
     for (let i = 0; i < 10; i++) {
-        r += Number(cpf[i]) * j;
-        j--;
+        r += Number(cpf[i]) * peso;
+        peso--;
     }
 
     r = 11 - (r % 11);
