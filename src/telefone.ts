@@ -1,4 +1,4 @@
-export function validarTelefone(telefone) {
+export function validarTelefone(telefone: string): boolean {
     // Verificando se o tipo esta correto (É uma string)
     if (typeof telefone !== "string") return false;
 
@@ -24,5 +24,5 @@ export function validarTelefone(telefone) {
         86, 87, 88, 89, 91, 92, 93, 94, 95, 96, 97, 98, 99,
     ]);
 
-    return ddds.has(Number(telefone[0] + telefone[1]));
+    return ddds.has(Number(telefone.slice(0, 2)));
 }

@@ -1,4 +1,4 @@
-export function validarCNPJ(cnpj) {
+export function validarCNPJ(cnpj: string): boolean {
     // Verificando se o tipo esta correto (É uma string)
     if (typeof cnpj !== "string") return false;
 
@@ -27,7 +27,7 @@ export function validarCNPJ(cnpj) {
     r = 0;
     peso = 6;
     for (let i = 0; i < 13; i++) {
-        r += cnpj[i] * peso;
+        r += Number(cnpj[i]) * peso;
         peso--;
         if (peso === 1) peso = 9;
     }
