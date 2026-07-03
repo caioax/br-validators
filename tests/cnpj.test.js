@@ -27,4 +27,16 @@ describe("validarCNPJ", () => {
     it("Deve retornar false para CNPJ inválido", () => {
         expect(validarCNPJ("11.222.333/0001")).toBe(false);
     });
+
+    it("Deve retornar false para CNPJ inválido", () => {
+        expect(validarCNPJ(null)).toBe(false);
+    });
+
+    it("Deve retornar false para CNPJ inválido", () => {
+        expect(validarCNPJ(112223330001)).toBe(false);
+    });
+
+    it("Deve retornar false para CNPJ inválido", () => {
+        expect(validarCNPJ("")).toBe(false);
+    });
 });

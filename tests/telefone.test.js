@@ -27,4 +27,16 @@ describe("validarTelefone", () => {
     it("Deve retornar false para Telefone inválido", () => {
         expect(validarTelefone("(31) 9888-777")).toBe(false);
     });
+
+    it("Deve retornar false para Telefone inválido", () => {
+        expect(validarTelefone(null)).toBe(false);
+    });
+
+    it("Deve retornar false para Telefone inválido", () => {
+        expect(validarTelefone(23988887777)).toBe(false);
+    });
+
+    it("Deve retornar false para Telefone inválido", () => {
+        expect(validarTelefone("")).toBe(false);
+    });
 });

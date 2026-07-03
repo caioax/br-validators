@@ -1,4 +1,7 @@
 export function validarTelefone(telefone) {
+    // Verificando se o tipo esta correto (É uma string)
+    if (typeof telefone !== "string") return false;
+
     // Tirando espaços, parenteses e traços
     telefone = telefone.replace(/[ ()-]/g, "");
     if (telefone.length < 10 || telefone.length > 11) return false;

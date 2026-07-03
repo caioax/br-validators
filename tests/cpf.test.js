@@ -27,4 +27,16 @@ describe("validarCPF", () => {
     it("Deve retornar false para CPF inválido", () => {
         expect(validarCPF("123.456.789")).toBe(false);
     });
+
+    it("Deve retornar false para CPF inválido", () => {
+        expect(validarCPF(null)).toBe(false);
+    });
+
+    it("Deve retornar false para CPF inválido", () => {
+        expect(validarCPF(11144477736)).toBe(false);
+    });
+
+    it("Deve retornar false para CPF inválido", () => {
+        expect(validarCPF("")).toBe(false);
+    });
 });

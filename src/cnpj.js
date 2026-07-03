@@ -1,4 +1,7 @@
 export function validarCNPJ(cnpj) {
+    // Verificando se o tipo esta correto (É uma string)
+    if (typeof cnpj !== "string") return false;
+
     // Tirando pontos, barras e traços
     cnpj = cnpj.replace(/[./-]/g, "");
     if (cnpj.length !== 14) return false;

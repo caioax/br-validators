@@ -1,4 +1,7 @@
 export function validarCPF(cpf) {
+    // Verificando se o tipo esta correto (É uma string)
+    if (typeof cpf !== "string") return false;
+
     // Tirando pontos e traços
     cpf = cpf.replace(/[.-]/g, "");
     if (cpf.length !== 11) return false;
